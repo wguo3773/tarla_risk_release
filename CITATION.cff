@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the archived calculator using the following metadata."
+title: "Tarlatamab CRS and ICANS Risk Calculator"
+type: software
+version: 1.0.0
+date-released: 2026-09-22
+doi: 10.5281/zenodo.22890432
+url: "https://wguo3.shinyapps.io/tarla_risk_calculator/"
+authors:
+  - family-names: Guo
+    given-names: Wanru
+  - family-names: Fenton
+    given-names: Graeme
+  - family-names: Tatsuoka
+    given-names: Curtis
+  - family-names: Rosner
+    given-names: Samuel
