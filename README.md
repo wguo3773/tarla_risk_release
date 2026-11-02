@@ -1,8 +1,10 @@
 # Tarlatamab CRS and ICANS Risk Calculator
 
-**Authors:** Wanru Guo, Graeme Fenton, Curtis Tatsuoka, and Samuel Rosner
+**Authors:** Wanru Guo\*, Graeme Fenton\*, Curtis Tatsuoka, and Samuel Rosner
 
-[Open the Shiny calculator](https://wguo3.shinyapps.io/tarla_risk_calculator/) | [Zenodo software archive](https://doi.org/10.5281/zenodo.22890432)
+\*Wanru Guo and Graeme Fenton contributed equally and are co-first authors of the associated manuscript.
+
+[Open the Shiny calculator](https://wguo3.shinyapps.io/tarla_risk_calculator/) | [medRxiv manuscript](https://doi.org/10.64898/2026.10.02.26364624) | [Zenodo software archive](https://doi.org/10.5281/zenodo.22890432)
 
 A calculator for estimating grade 2 or higher cytokine release syndrome (CRS) and any-grade immune effector cell-associated neurotoxicity syndrome (ICANS) after tarlatamab. Separate forms allow each outcome to be calculated using its required clinical inputs. The application returns fitted model probabilities using the original preprocessing and coefficients.
 
@@ -14,44 +16,11 @@ A calculator for estimating grade 2 or higher cytokine release syndrome (CRS) an
 
 The models were developed in a small cohort and require independent external validation. Estimates are exploratory and should not be used alone to make treatment or monitoring decisions.
 
-## Manuscript figures
+## Associated manuscript
 
-The following supplied figures report the manuscript elastic-net analyses, including pooled five-fold out-of-fold ROC curves and performance tables.
+Fenton G\*, Guo W\*, et al. **Predictive markers of response and toxicity to tarlatamab in patients with extensive stage small cell lung cancer: a multi-institutional real-world analysis.** medRxiv; 2026. [Read the manuscript](https://doi.org/10.64898/2026.10.02.26364624).
 
-![Pooled out-of-fold ROC curves](results/tarlatamab-pooled-roc-supplied.png)
-
-### Figure 4: ROC curves and performance metrics
-
-![Figure 4: pooled out-of-fold ROC curves, sensitivity, specificity, and confusion matrices](results/tarlatamab-figure-4-supplied.png)
-
-## Original model coefficients
-
-The tables show the nonzero coefficients and intercepts, rounded to three decimals. The calculator retains full precision and applies the saved preprocessing before prediction; these values should not be multiplied directly by unprocessed age or LDH values. The complete fitted models are in [models/locked_models.rds](models/locked_models.rds).
-
-### CRS, grade 2 or higher
-
-| Term | Coefficient |
-|---|---:|
-| Intercept | -1.223 |
-| C1D1 LDH | +0.396 |
-| Other lesions: 6 or more | +0.295 |
-| Other lesions: 1-5 | -0.244 |
-| Sex: female | -0.235 |
-| Sex: male | +0.235 |
-| Liver lesions: 6 or more | +0.189 |
-| Age at C1D1 | -0.112 |
-
-### ICANS, any grade
-
-| Term | Coefficient |
-|---|---:|
-| Intercept | -1.040 |
-| Metastatic sites: 3 or more | +0.300 |
-| ECOG | +0.265 |
-| C1D1 LDH | +0.219 |
-| Age at C1D1 | +0.085 |
-
-C1D1 means cycle 1, day 1. The metastatic-site category above follows the application's encoded category of 3 or more sites.
+\*Equal contribution; co-first authors. This manuscript is a preprint and has not been peer reviewed.
 
 ## Run locally
 
@@ -68,4 +37,4 @@ The repository contains application code, fitted model parameters, and supplied 
 
 Guo W, Fenton G, Tatsuoka C, Rosner S. *Tarlatamab CRS and ICANS Risk Calculator*. Version 1.0.0. Zenodo; 2026. https://doi.org/10.5281/zenodo.22890432.
 
-The Zenodo v1.0.0 archive contains the application and fitted models. This repository additionally includes the manuscript figures and coefficient tables.
+The Zenodo v1.0.0 archive preserves the application and fitted models.
